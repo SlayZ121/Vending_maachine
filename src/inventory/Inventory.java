@@ -56,5 +56,13 @@ public class Inventory {
 
     }
 
+    public void updateSoldOutItem(int itemCodeNumber){
+        for(ItemShelf shelf: inventory){
+            if(shelf.getItemCode()==itemCodeNumber){
+                shelf.setSoldOut(true);
+            }
+        }
+    }
+
 
 }
